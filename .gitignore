@@ -1,2 +1,3 @@
 # Project exclude paths
 /venv/
+/main_app/bot_api/bot_api/secrete.py
