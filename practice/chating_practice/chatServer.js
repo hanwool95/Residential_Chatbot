@@ -19,8 +19,8 @@ app.use(function(req, res){
 
 //http 모듈 이용하여 지금까지 정의한 app을 집어 넣어 서버를 생성하고, 서버는 포트 3000으로 계속 listen 상태에 돌입.
 var server = require('http').createServer(app);
-server.listen(3000);
-console.log("listening at http://127.0.0.1:3000...");
+server.listen(3001);
+console.log("listening at http://127.0.0.1:3001...");
 
 
 //클로저를 사용해, private한 유니크 id를 만든다. 즉, 사용자별 고유 id 생성을 위해 별도의 id를 정의하는 함수가 있는데

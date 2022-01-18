@@ -1,2 +1,13 @@
 https://m.mkexdev.net/337
 
+교차출처공유 cors
+https://developer.mozilla.org/ko/docs/Web/HTTP/CORS
+https://surprisecomputer.tistory.com/32
+https://developer.mozilla.org/en-US/docs/Web/HTTP/CORS
+
+fetch
+https://www.daleseo.com/js-window-fetch/
+api객체 호출하면 응답 객체 resolve하는 promise 객체.
+
+promise
+https://joshua1988.github.io/web-development/javascript/promise-for-beginners/

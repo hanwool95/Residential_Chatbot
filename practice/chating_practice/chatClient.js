@@ -1,6 +1,6 @@
 window.onload = function(){
     //웹소켓 연결하여 클라이언트 소켓 정의.
-    var socket = io.connect('ws://127.0.0.1:3000');
+    var socket = io.connect('ws://127.0.0.1:3001');
     // id를 참조하여 메세지 정의. div는 메세지 박스, txt는 메세지 내용.
     var div = document.getElementById('message');
     var txt = document.getElementById('txtChat');
