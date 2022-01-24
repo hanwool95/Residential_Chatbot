@@ -1,5 +1,7 @@
 {
   "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
     "cors": "^2.8.5",
     "express": "^4.17.2",
     "expresss": "^0.0.0",
@@ -9,5 +11,11 @@
     "nodemon": "^2.0.15",
     "socket.io": "^4.4.1",
     "xhr2": "^0.2.1"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node index.js"
+  },
+  "devDependencies": {
+    "babel-node": "^0.0.1-security"
   }
 }
