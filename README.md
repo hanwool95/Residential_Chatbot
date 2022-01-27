@@ -13,6 +13,7 @@ Automatic Residential Chatbot Diagram<br><br>
 2. Chatbot API Server (NLP)
 3. DB (NoSQL - MongoDB)
 4. Model (ML - Transformer)
+5. Insert information & Grouping 
 <br><br>
 
 ## Execute Prototype Chatbot<br>
