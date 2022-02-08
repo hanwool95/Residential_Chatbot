@@ -1,3 +1,5 @@
+
+
 window.onload = function(){
     var socket = io.connect('ws://127.0.0.1:3737');
     var div = document.getElementById('message');
@@ -13,7 +15,7 @@ window.onload = function(){
                 txt.value = '';
             }
         }
-    };
+    }
 
     socket.on('clientReceiver', function(data){
         var message = '['+ data.clientID + '님의 말' + '] ' + data.message;

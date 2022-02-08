@@ -2,35 +2,27 @@
 const fetch = require('node-fetch');
 
 const express = require("express");
-let url = require("url");
 const http = require('http');
 
 
-// import express from 'express';
-// import url from 'url';
-// import http from 'http';
-// import socket from 'socket.io';
-
-// let s = socket(server);
 
 const PORT = 3737;
 
-// let corsOptions = {
-//     origin: 'https://127.0.0.1',
-//     credentials: true
-// }
 
 const app = express();
+app.set('views', __dirname + '/views')
+app.set("view engine", 'ejs')
+app.use(express.static(__dirname + '/'));
 
-// const xhr = new XMLHttpRequest();
-// const xurl = 'http://127.0.0.1:8000';
+// app.use(function(req, res){
+//     var fileName = url.parse(req.url).pathname.replace("/","");
+//     res.sendFile(fileName, {root: __dirname});
+//     console.log("use:", fileName);
+// });
 
-
-app.use(function(req, res){
-    var fileName = url.parse(req.url).pathname.replace("/","");
-    res.sendFile(fileName, {root: __dirname});
-    console.log("use:", fileName);
-});
+app.get('/', (req, res) =>{
+    res.render('interface')
+})
 
 //app.use(cors(corsOptions))
 
