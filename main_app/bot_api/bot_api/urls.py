@@ -20,4 +20,5 @@ urlpatterns = [
     path('admin/', admin.site.urls),
     path('morph/', include('morph.urls')),
     path('ml/', include('ml.urls')),
+    path('locations/', include('locations.urls'))
 ]

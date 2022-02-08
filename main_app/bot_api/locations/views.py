@@ -1,27 +1,15 @@
 from django.shortcuts import render
-
 from django.http import HttpResponse, JsonResponse
-
 import json
 
-from konlpy.tag import Kkma
-
-kma = Kkma()
-
 # Create your views here.
-
-
-
 def index(request):
     data = json.loads(request.body)
     print(data)
-    text = data['body']
+    lat = data['lat']
+    long = data['long']
 
-    morph_result = str(kma.pos(text))
 
-    result = {'title': 'morph', 'body': morph_result}
+    result = {'title': 'locations', 'lat': lat, 'long': long}
     print(result)
     return JsonResponse(dict(result))
-
-
-
