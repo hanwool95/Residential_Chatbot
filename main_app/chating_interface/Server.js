@@ -3,7 +3,11 @@ const fetch = require('node-fetch');
 
 const express = require("express");
 const http = require('http');
+const mongoose = require("mongoose")
 
+const dotenv = require("dotenv")
+dotenv.config()
+const MONGO_URI = process.env.MONGO_URI
 
 
 const PORT = 3737;
@@ -14,18 +18,14 @@ app.set('views', __dirname + '/views')
 app.set("view engine", 'ejs')
 app.use(express.static(__dirname + '/'));
 
-// app.use(function(req, res){
-//     var fileName = url.parse(req.url).pathname.replace("/","");
-//     res.sendFile(fileName, {root: __dirname});
-//     console.log("use:", fileName);
-// });
 
 app.get('/', (req, res) =>{
     res.render('interface')
 })
 
-//app.use(cors(corsOptions))
-
+mongoose.connect(MONGO_URI, {useNewUrlParser: true, useUnifiedTopology: true})
+    .then(() => console.log("Successfully connected to mongodb"))
+    .catch(e => console.log(e))
 
 let server = http.createServer(app);
 server.listen(PORT, () => {
