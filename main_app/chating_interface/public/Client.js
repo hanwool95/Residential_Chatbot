@@ -1,7 +1,7 @@
 
 
 window.onload = function(){
-    var socket = io.connect('ws://127.0.0.1:3737');
+    var socket = io.connect();
     var div = document.getElementById('message');
     var txt = document.getElementById('txtChat');
     txt.focus();

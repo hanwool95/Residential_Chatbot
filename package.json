@@ -1,5 +1,6 @@
 {
   "dependencies": {
+    "browser-env": "^3.3.0",
     "cors": "^2.8.5",
     "dotenv": "^16.0.0",
     "ejs": "^3.1.6",

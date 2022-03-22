@@ -1,4 +1,7 @@
 var x = document.getElementById("location");
+
+const Loacations = require("../models/locations")
+
 function getLocation() {
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition(showPosition);
@@ -7,25 +10,27 @@ function getLocation() {
   }
 }
 
-const Location = require("./models/locations")
+
 
 function showPosition(position) {
   x.innerHTML = "Latitude: " + position.coords.latitude +
       "<br>Longitude: " + position.coords.longitude;
   SavePosition(position);
-
+}
 
 function SavePosition(position) {
-  let location = new Location();
+  let location = new Locations();
   location.longitude = position.coords.longitude;
   location.latitude = position.coords.latitude;
   location.index = 0
   location.save((err) =>{
         if (err) {
-            return res.status(500).send({error: 'database failure'});
+            console.log('database failure')
         }
     })
 }
+
+
 //   fetch("http://127.0.0.1:8000/locations/", {
 //             method: "POST",
 //             headers: { "Content-Type": "application/json",},
@@ -36,6 +41,5 @@ function SavePosition(position) {
 //               long: position.coords.longitude
 //             })
 // })
-}
 
 getLocation()

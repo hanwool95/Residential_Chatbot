@@ -11,3 +11,6 @@ api객체 호출하면 응답 객체 resolve하는 promise 객체.
 
 promise
 https://joshua1988.github.io/web-development/javascript/promise-for-beginners/
+
+구현 참고
+https://berkbach.com/node-js와-socket-io를-이용한-채팅-구현-1-cb215954847b
